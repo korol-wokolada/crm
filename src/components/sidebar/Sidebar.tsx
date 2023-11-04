@@ -73,7 +73,7 @@ export default function Sidebar() {
                 </NavLink>
                 <NavLink
                   className="Navigation-list-item-link"
-                  to={"/inancialManagement"}>
+                  to={"/financialManagement"}>
                   <div className="Navigation-list-item">
                     <div className="Navigation-list-item-icon financialManagement"></div>
                     <p className="Navigation-list-item-name">

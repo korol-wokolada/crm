@@ -8,7 +8,6 @@ import LoaderIcon from "../../loaderIcon/LoaderIcon";
 export default function AdressPage() {
   const [adress, setAdress] = useState<AdressSugestions | undefined>(undefined);
   const [loading, setLoading] = useState(false);
-  console.log(adress, loading);
 
   const handlerButtonClick = useCallback(async (value: string) => {
     if (value.length >= 3) {
