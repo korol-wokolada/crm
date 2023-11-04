@@ -1,0 +1,84 @@
+.Header {
+  grid-area: header;
+
+  max-width: 1440px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  align-items: center;
+  background-color: #4f27bf;
+  color: white;
+}
+
+.Logo {
+  display: flex;
+  align-items: center;
+}
+
+.Logo-icon {
+  display: block;
+  width: 48px;
+  height: 48px;
+  background-image: url(../../assets/icons/ic_logologo.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.Logo-name {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-left: 24px;
+}
+
+.User-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.User-icon {
+  width: 48px;
+  height: 48px;
+  background-image: url(../../assets/icons/ic_personavatar.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 16px;
+}
+.User-name {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+@media (max-width: 768px) {
+  .Header {
+    padding: 0 15px;
+  }
+  .Logo-name {
+    font-size: 16px;
+    margin-left: 16px;
+  }
+
+  .User-name {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .Logo-name {
+    display: none;
+  }
+  .Logo-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .User-icon {
+    width: 32px;
+    height: 32px;
+  }
+}

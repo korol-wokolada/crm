@@ -1,0 +1,79 @@
+.AdressPage-search-block {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1076px;
+  gap: 24px;
+}
+
+.AdressPage-search-input {
+  flex: 1;
+  border-radius: 10px;
+  border: 3px solid #4f27bf;
+  color: var(--Text, #1c1c1e);
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 23px;
+  width: 100%;
+}
+
+.AdressPage-search-button {
+  border-radius: 10px;
+  background: #4f27bf;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+}
+
+.search-button-icon {
+  width: 32px;
+  height: 32px;
+  background-image: url(../../../../../assets/icons/VectorsearchWhite.svg);
+  background-size: contain;
+}
+
+@media (max-width: 910px) {
+  .AdressPage-search-button {
+    font-size: 20px;
+    padding: 0 20px;
+  }
+  .AdressPage-search-input {
+    padding: 23px 0 23px 23px;
+  }
+}
+
+@media (max-width: 520px) {
+  .serch-button-name {
+    display: none;
+  }
+  .search-button-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .AdressPage-search-input {
+    padding: 18px 0 18px 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .AdressPage-search-button {
+    padding: 5px;
+  }
+  .serch-button-name {
+    display: none;
+  }
+
+  .AdressPage-search-input {
+    padding: 5px 0 5px 6px;
+  }
+}

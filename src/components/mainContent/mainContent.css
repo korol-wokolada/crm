@@ -1,0 +1,6 @@
+.Main-content {
+  grid-area: mainContent;
+  max-height: calc(1024px - 80px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}

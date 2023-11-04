@@ -1,0 +1,209 @@
+.Navigation-wrapper {
+  grid-area: sidebar;
+  overflow-y: auto;
+  max-height: calc(1024px - 80px);
+  box-shadow: 0px 0px 5px 0px rgba(2, 0, 96, 0.25);
+}
+
+.Navigation-wrapper::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+/* Hide the scrollbar track */
+.Navigation-wrapper::-webkit-scrollbar-track {
+  display: none;
+}
+
+.Navigation {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0px 0px 32px;
+  color: #1c1c1e;
+}
+
+.Navigation-name {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.Navigation-list {
+  margin-top: 36px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.Navigation-list-item-link {
+  position: relative;
+}
+
+.Navigation-list-item-link.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 3px; /* Здесь вы можете настроить ширину маркера по вашему усмотрению */
+  background-color: #4f27bf;
+  border-left: 0px solid;
+  border-top-left-radius: 5px; /* Задаем border-radius для верхнего левого угла */
+  border-bottom-left-radius: 5px;
+}
+
+.Navigation-list-item {
+  display: flex;
+}
+
+.Navigation-list-item.settings {
+  display: flex;
+  flex-direction: column;
+}
+
+.setting-icon-close {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  rotate: 180deg;
+  top: 4px;
+  left: 230px;
+
+  background-image: url(../../assets/icons/Polygon\ 8triangle.svg);
+}
+.setting-icon-open {
+  position: absolute;
+  top: 8px;
+  left: 230px;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADDSURBVHgBjZHBDYIwFIYLeABOjIAb6AY6BidkAtnAERyheoEwBWxgnEBH4NKkp9a/TU0E26Z/0rR57f++9/oIcWgYhtp1F9uCfd+fpJQ3lzFaByilRZZlDxxLGGfO+bZpmtlLStO0VQadMYqKPM/PXhLKKvHw9RtTNGz7qqreVhIMl7+soGFRKwmUAy5H4hCIR9CmBWmdzUK8LspTX0xM8x7tuq5rdQLT/BhgIt8RxFAdYjAl6hFshBD3JEkmEijG2PMDn9dDm+vB8SAAAAAASUVORK5CYII=);
+}
+
+.Navigation-list-item-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+}
+
+.Navigation-list-item-icon.main {
+  background-repeat: no-repeat;
+  background-image: url(../../assets/icons/ic_главнаяhome.svg);
+  background-size: contain;
+}
+
+.Navigation-list-item-icon.search {
+  background-repeat: no-repeat;
+  background-image: url(../../assets/icons/Vectorsearch.svg);
+  background-size: contain;
+}
+
+.Navigation-list-item-icon.tables {
+  background-repeat: no-repeat;
+  background-image: url(../../assets/icons/Vectortables.svg);
+  background-size: contain;
+}
+
+.Navigation-list-item-icon.calendar {
+  background-repeat: no-repeat;
+  background-image: url(../../assets/icons/Group\ 697calendar.svg);
+  background-size: contain;
+}
+
+.Navigation-list-item-icon.map {
+  background-repeat: no-repeat;
+  background-image: url(../../assets/icons/Groupmap.svg);
+  background-size: contain;
+}
+
+.Navigation-list-item-icon.widgets {
+  background-repeat: no-repeat;
+  background-image: url(../../assets/icons/Vectorwidgets.svg);
+  background-size: contain;
+}
+
+.Navigation-list-item-icon.settings {
+  height: 34px;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/icons//Groupsettings.svg);
+  background-size: contain;
+}
+
+.Navigation-settings-block {
+  display: flex;
+  position: relative;
+}
+.Navigation-setting-items {
+  margin: 37px 0 0 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.Navigation-list-item-icon.profileSettings {
+  height: 32px;
+  width: 45px;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/icons/GroupprofielSettings.svg);
+  background-size: contain;
+}
+
+.Navigation-list-item-icon.financialManagement {
+  height: 32px;
+  width: 52px;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/icons/VectorfinanceSettings.svg);
+  background-size: contain;
+}
+
+.Navigation-list-item-icon.exit {
+  background-repeat: no-repeat;
+  background-image: url(../../assets/icons/Vectorexit.svg);
+  background-size: contain;
+}
+
+.Navigation-list-item-name {
+  color: var(--Text, #1c1c1e);
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .Navigation-list-item-name {
+    display: none;
+    padding: 0;
+  }
+  .Navigation {
+    padding: 0;
+  }
+  .Navigation-name {
+    display: none;
+  }
+  .Navigation-list-item {
+    justify-content: center; /* Размещаем элементы в центре по горизонтали */
+    align-items: center;
+  }
+  .Navigation-setting-items {
+    margin: 40px 0 0 18px;
+  }
+  .Navigation-list-item-icon {
+    margin: 0px;
+  }
+}
+
+@media (max-width: 420px) {
+  .Navigation-list-item-icon {
+    width: 28px;
+    height: 28px;
+  }
+}

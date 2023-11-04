@@ -1,13 +1,40 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  margin: 0 auto;
+  max-width: 1440px;
+  height: 1024px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin: 10px 0;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  height: 127px;
+  background: #4f27bf;
+  border-radius: 5px;
+}
+
+/* Firefox */
+/* Note: Firefox does not support customizing scrollbar width */
+* {
+  scrollbar-width: thin; /* "auto" is the default value, "none" hides the scrollbar */
+  scrollbar-color: #4f27bf transparent; /* thumb and track colors */
 }
