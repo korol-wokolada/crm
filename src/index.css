@@ -13,15 +13,19 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 li {
   list-style-type: none;
 }
+
 a {
   text-decoration: none;
 }
+
 p {
   margin: 10px 0;
 }
+
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -35,6 +39,6 @@ p {
 /* Firefox */
 /* Note: Firefox does not support customizing scrollbar width */
 * {
-  scrollbar-width: thin; /* "auto" is the default value, "none" hides the scrollbar */
-  scrollbar-color: #4f27bf transparent; /* thumb and track colors */
+  scrollbar-width: thin;
+  scrollbar-color: #4f27bf transparent;
 }

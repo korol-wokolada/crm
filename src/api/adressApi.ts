@@ -1,8 +1,8 @@
-import { AdressSugestions } from "./apiTypes";
+import { AdressSugestionsType } from "./apiTypes";
 
 export async function getAdressRequest(
   query: string
-): Promise<AdressSugestions | undefined> {
+): Promise<AdressSugestionsType | undefined> {
   const url =
     "https://suggestions.dadata.ru/suggestions/api/4_1/rs/suggest/address";
   const token = "0785d0179eda6f4572374c4470d2cd99ffef5fe8";

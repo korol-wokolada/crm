@@ -1,17 +1,19 @@
 import React from "react";
-import "./header.css";
+import "./style.css";
 
 export default function Header() {
   return (
-    <header className="Header">
-      <div className="Logo">
-        <div className="Logo-icon"></div>
-        <p className="Logo-name">Wrench CRM</p>
+    <header className="header">
+      <div className="logo">
+        <div className="logo-icon"></div>
+
+        <p className="logo-name">Wrench CRM</p>
       </div>
 
-      <div className="User-wrapper">
-        <div className="User-icon"></div>
-        <p className="User-name">Имя Фамилия</p>
+      <div className="user-wrapper">
+        <div className="user-icon"></div>
+
+        <p className="user-name">Имя Фамилия</p>
       </div>
     </header>
   );

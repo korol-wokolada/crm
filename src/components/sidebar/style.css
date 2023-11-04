@@ -1,27 +1,27 @@
-.Navigation-wrapper {
+.navigation-wrapper {
   grid-area: sidebar;
   overflow-y: auto;
   max-height: calc(1024px - 80px);
   box-shadow: 0px 0px 5px 0px rgba(2, 0, 96, 0.25);
 }
 
-.Navigation-wrapper::-webkit-scrollbar-thumb {
+.navigation-wrapper::-webkit-scrollbar-thumb {
   display: none;
 }
 
 /* Hide the scrollbar track */
-.Navigation-wrapper::-webkit-scrollbar-track {
+.navigation-wrapper::-webkit-scrollbar-track {
   display: none;
 }
 
-.Navigation {
+.navigation {
   display: flex;
   flex-direction: column;
   padding: 24px 0px 0px 32px;
   color: #1c1c1e;
 }
 
-.Navigation-name {
+.navigation-name {
   font-family: Montserrat;
   font-size: 20px;
   font-style: normal;
@@ -29,7 +29,7 @@
   line-height: normal;
 }
 
-.Navigation-list {
+.navigation-list {
   margin-top: 36px;
   margin-bottom: 25px;
   display: flex;
@@ -37,29 +37,29 @@
   gap: 48px;
 }
 
-.Navigation-list-item-link {
+.navigation-list-item-link {
   position: relative;
 }
 
-.Navigation-list-item-link.active::after {
+.navigation-list-item-link.active::after {
   content: "";
   display: block;
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
-  width: 3px; /* Здесь вы можете настроить ширину маркера по вашему усмотрению */
+  width: 3px;
   background-color: #4f27bf;
   border-left: 0px solid;
-  border-top-left-radius: 5px; /* Задаем border-radius для верхнего левого угла */
+  border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-.Navigation-list-item {
+.navigation-list-item {
   display: flex;
 }
 
-.Navigation-list-item.settings {
+.navigation-list-item.settings {
   display: flex;
   flex-direction: column;
 }
@@ -73,7 +73,7 @@
   top: 4px;
   left: 230px;
 
-  background-image: url(../../assets/icons/Polygon\ 8triangle.svg);
+  background-image: url(../../assets/icons/triangle.svg);
 }
 .setting-icon-open {
   position: absolute;
@@ -82,93 +82,92 @@
   background-repeat: no-repeat;
   width: 15px;
   height: 15px;
-
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAMCAYAAAC5tzfZAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADDSURBVHgBjZHBDYIwFIYLeABOjIAb6AY6BidkAtnAERyheoEwBWxgnEBH4NKkp9a/TU0E26Z/0rR57f++9/oIcWgYhtp1F9uCfd+fpJQ3lzFaByilRZZlDxxLGGfO+bZpmtlLStO0VQadMYqKPM/PXhLKKvHw9RtTNGz7qqreVhIMl7+soGFRKwmUAy5H4hCIR9CmBWmdzUK8LspTX0xM8x7tuq5rdQLT/BhgIt8RxFAdYjAl6hFshBD3JEkmEijG2PMDn9dDm+vB8SAAAAAASUVORK5CYII=);
+  background-image: url(../../assets/icons/triangle.svg);
 }
 
-.Navigation-list-item-icon {
+.navigation-list-item-icon {
   width: 32px;
   height: 32px;
   margin-right: 16px;
 }
 
-.Navigation-list-item-icon.main {
+.navigation-list-item-icon.main {
   background-repeat: no-repeat;
-  background-image: url(../../assets/icons/ic_главнаяhome.svg);
+  background-image: url(../../assets/icons/home-icon.svg);
   background-size: contain;
 }
 
-.Navigation-list-item-icon.search {
+.navigation-list-item-icon.search {
   background-repeat: no-repeat;
-  background-image: url(../../assets/icons/Vectorsearch.svg);
+  background-image: url(../../assets/icons/search-icon.svg);
   background-size: contain;
 }
 
-.Navigation-list-item-icon.tables {
+.navigation-list-item-icon.tables {
   background-repeat: no-repeat;
-  background-image: url(../../assets/icons/Vectortables.svg);
+  background-image: url(../../assets/icons/tablec-icon.svg);
   background-size: contain;
 }
 
-.Navigation-list-item-icon.calendar {
+.navigation-list-item-icon.calendar {
   background-repeat: no-repeat;
-  background-image: url(../../assets/icons/Group\ 697calendar.svg);
+  background-image: url(../../assets/icons/calendar-icon.svg);
   background-size: contain;
 }
 
-.Navigation-list-item-icon.map {
+.navigation-list-item-icon.map {
   background-repeat: no-repeat;
-  background-image: url(../../assets/icons/Groupmap.svg);
+  background-image: url(../../assets/icons/map-icon.svg);
   background-size: contain;
 }
 
-.Navigation-list-item-icon.widgets {
+.navigation-list-item-icon.widgets {
   background-repeat: no-repeat;
-  background-image: url(../../assets/icons/Vectorwidgets.svg);
+  background-image: url(../../assets/icons/widgets-icon.svg);
   background-size: contain;
 }
 
-.Navigation-list-item-icon.settings {
+.navigation-list-item-icon.settings {
   height: 34px;
   background-repeat: no-repeat;
-  background-image: url(../../assets/icons//Groupsettings.svg);
+  background-image: url(../../assets/icons/settings-icon.svg);
   background-size: contain;
 }
 
-.Navigation-settings-block {
+.navigation-settings-block {
   display: flex;
   position: relative;
 }
-.Navigation-setting-items {
+.navigation-setting-items {
   margin: 37px 0 0 48px;
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
-.Navigation-list-item-icon.profileSettings {
+.navigation-list-item-icon.profileSettings {
   height: 32px;
   width: 45px;
   background-repeat: no-repeat;
-  background-image: url(../../assets/icons/GroupprofielSettings.svg);
+  background-image: url(../../assets/icons/profileSettings-icon.svg);
   background-size: contain;
 }
 
-.Navigation-list-item-icon.financialManagement {
+.navigation-list-item-icon.financialManagement {
   height: 32px;
   width: 52px;
   background-repeat: no-repeat;
-  background-image: url(../../assets/icons/VectorfinanceSettings.svg);
+  background-image: url(../../assets/icons/finanseSettings-icon.svg);
   background-size: contain;
 }
 
-.Navigation-list-item-icon.exit {
+.navigation-list-item-icon.exit {
   background-repeat: no-repeat;
-  background-image: url(../../assets/icons/Vectorexit.svg);
+  background-image: url(../../assets/icons/exit-icon.svg);
   background-size: contain;
 }
 
-.Navigation-list-item-name {
+.navigation-list-item-name {
   color: var(--Text, #1c1c1e);
   font-family: Montserrat;
   font-size: 20px;
@@ -179,30 +178,30 @@
 }
 
 @media (max-width: 768px) {
-  .Navigation-list-item-name {
+  .navigation-list-item-name {
     display: none;
     padding: 0;
   }
-  .Navigation {
+  .navigation {
     padding: 0;
   }
-  .Navigation-name {
+  .navigation-name {
     display: none;
   }
-  .Navigation-list-item {
+  .navigation-list-item {
     justify-content: center; /* Размещаем элементы в центре по горизонтали */
     align-items: center;
   }
-  .Navigation-setting-items {
+  .navigation-setting-items {
     margin: 40px 0 0 18px;
   }
-  .Navigation-list-item-icon {
+  .navigation-list-item-icon {
     margin: 0px;
   }
 }
 
 @media (max-width: 420px) {
-  .Navigation-list-item-icon {
+  .navigation-list-item-icon {
     width: 28px;
     height: 28px;
   }

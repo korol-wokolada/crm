@@ -1,11 +1,11 @@
-.AdressPage-search-block {
+.adressPage-search-block {
   display: flex;
   justify-content: space-between;
   max-width: 1076px;
   gap: 24px;
 }
 
-.AdressPage-search-input {
+.adressPage-search-input {
   flex: 1;
   border-radius: 10px;
   border: 3px solid #4f27bf;
@@ -19,7 +19,7 @@
   width: 100%;
 }
 
-.AdressPage-search-button {
+.adressPage-search-button {
   border-radius: 10px;
   background: #4f27bf;
   color: #fff;
@@ -38,16 +38,16 @@
 .search-button-icon {
   width: 32px;
   height: 32px;
-  background-image: url(../../../../../assets/icons/VectorsearchWhite.svg);
+  background-image: url(../../../../../assets/icons/whiteSearch-icon.svg);
   background-size: contain;
 }
 
 @media (max-width: 910px) {
-  .AdressPage-search-button {
+  .adressPage-search-button {
     font-size: 20px;
     padding: 0 20px;
   }
-  .AdressPage-search-input {
+  .adressPage-search-input {
     padding: 23px 0 23px 23px;
   }
 }
@@ -60,20 +60,20 @@
     width: 28px;
     height: 28px;
   }
-  .AdressPage-search-input {
+  .adressPage-search-input {
     padding: 18px 0 18px 12px;
   }
 }
 
 @media (max-width: 420px) {
-  .AdressPage-search-button {
+  .adressPage-search-button {
     padding: 5px;
   }
   .serch-button-name {
     display: none;
   }
 
-  .AdressPage-search-input {
+  .adressPage-search-input {
     padding: 5px 0 5px 6px;
   }
 }

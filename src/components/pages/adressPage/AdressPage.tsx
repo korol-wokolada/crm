@@ -1,61 +1,49 @@
-import React, { useCallback, useState } from "react";
-import "./adressPage.css";
+import React, { FormEvent, useCallback, useState } from "react";
+import "./style.css";
 import AdressPageSearch from "./components/adressPageSearch/AdressPageSearch";
 import { getAdressRequest } from "../../../api/adressApi";
-import { AdressSugestions } from "../../../api/apiTypes";
-import LoaderIcon from "../../loaderIcon/LoaderIcon";
+
+import AdressList from "./components/adressList/AdressList";
+import { AdressSugestionsType } from "../../../api/apiTypes";
 
 export default function AdressPage() {
-  const [adress, setAdress] = useState<AdressSugestions | undefined>(undefined);
+  const [adress, setAdress] = useState<AdressSugestionsType | undefined>(
+    undefined
+  );
   const [loading, setLoading] = useState(false);
+  console.log(adress);
 
-  const handlerButtonClick = useCallback(async (value: string) => {
-    if (value.length >= 3) {
-      setLoading(true);
-      try {
-        const result = await getAdressRequest(value);
-        setAdress(result);
-      } catch (error) {
-        console.log("Произошла ошибка:", error);
-      } finally {
-        setLoading(false);
+  const handlerButtonClick = useCallback(
+    async (value: string, event: FormEvent) => {
+      event.preventDefault();
+
+      if (value.length >= 3) {
+        setLoading(true);
+        try {
+          const result = await getAdressRequest(value);
+          setAdress(result);
+        } catch (error) {
+          console.log("Произошла ошибка:", error);
+        } finally {
+          setLoading(false);
+        }
+      } else {
+        alert("Минимальное количество символов для поиска - 3");
       }
-    } else {
-      alert("Минимальное количество символов для поиска - 3");
-    }
-  }, []);
+    },
+    []
+  );
 
   return (
-    <div className="AdressPage-wrapper">
-      <h1 className="AdressPage-caption">Поиск адресов</h1>
-      <p className="AdressPage-clue">Введите интересующий вас адрес</p>
+    <div className="adressPage-wrapper">
+      <h1 className="adressPage-caption">Поиск адресов</h1>
+
+      <p className="adressPage-clue">Введите интересующий вас адрес</p>
+
       <AdressPageSearch onSearchRequestsClick={handlerButtonClick} />
-      {loading ? (
-        <LoaderIcon />
-      ) : (
-        adress && (
-          <div className="AdressPage-table">
-            <h2 className="AdreessPage-table-caption">Адреса</h2>
-            {adress.suggestions.length
-              ? adress.suggestions.map(
-                  ({ value, unrestricted_value }, index) => (
-                    <div className="AdressPage-table-adress" key={index}>
-                      <a
-                        href={`mailto:${unrestricted_value}`}
-                        className="AdressPage-table-adress-link">
-                        {value
-                          ?.replace(/г /g, " город ")
-                          .replace(/ пр-кт /g, " проспект ")
-                          .replace(/ ул /g, " улица ")
-                          .replace(/ д /g, " дом ")
-                          .replace(/пл/g, "площадь")}
-                      </a>
-                    </div>
-                  )
-                )
-              : "Извините, но поиск не дал результатов"}
-          </div>
-        )
+
+      {adress && (
+        <AdressList isLoading={loading} adress={adress?.suggestions} />
       )}
     </div>
   );

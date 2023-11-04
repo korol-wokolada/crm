@@ -1,8 +1,8 @@
-export type AdressSugestions = {
-  suggestions: Array<Suggestion>;
+export type AdressSugestionsType = {
+  suggestions: Array<SuggestionType> | undefined;
 };
 
-export type Suggestion = {
+export type SuggestionType = {
   data:
     | {
         area: null | string;

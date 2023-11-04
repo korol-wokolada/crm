@@ -1,8 +1,8 @@
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import "./adressPageSearch.css";
 
 export type AdressPageSearchProps = {
-  onSearchRequestsClick: (value: string) => void;
+  onSearchRequestsClick: (value: string, event: FormEvent) => void;
 };
 
 export default function AdressPageSearch({
@@ -15,19 +15,21 @@ export default function AdressPageSearch({
   };
 
   return (
-    <div className="AdressPage-search-block">
+    <form
+      className="adressPage-search-block"
+      onSubmit={(event) => onSearchRequestsClick(searchText, event)}>
       <input
-        className="AdressPage-search-input"
+        className="adressPage-search-input"
         type="text"
         value={searchText}
         onChange={handleInputChange}
         placeholder="Введите текст для поиска"></input>
-      <button
-        className="AdressPage-search-button"
-        onClick={() => onSearchRequestsClick(searchText)}>
+
+      <button className="adressPage-search-button" type="submit">
         <span className="search-button-icon"></span>
+
         <span className="serch-button-name">Поиск</span>
       </button>
-    </div>
+    </form>
   );
 }

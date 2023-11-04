@@ -1,0 +1,42 @@
+.adressPage-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 32px 0 32px;
+  color: var(--Text, #1c1c1e);
+  font-family: Montserrat;
+}
+
+.adressPage-caption {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+}
+
+.adressPage-clue {
+  margin: 16px 0 24px 0;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media (max-width: 520px) {
+  .adressPage-caption {
+    font-size: 26px;
+  }
+  .adressPage-clue {
+    font-size: 16px;
+  }
+  .adreessPage-table-caption {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0 0 16px 0;
+  }
+  .adressPage-table-adress {
+    font-size: 16px;
+  }
+}
