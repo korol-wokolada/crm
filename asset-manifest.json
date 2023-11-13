@@ -21,7 +21,7 @@
     "main.164ae369.js.map": "./static/js/main.164ae369.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e056965.css",
-    "static/js/main.164ae369.js"
+    "./static/css/main.9e056965.css",
+    "./static/js/main.164ae369.js"
   ]
 }
