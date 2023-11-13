@@ -11,7 +11,6 @@ export default function AdressPage() {
     undefined
   );
   const [loading, setLoading] = useState(false);
-  console.log(adress);
 
   const handlerButtonClick = useCallback(
     async (value: string, event: FormEvent) => {
